@@ -1,0 +1,76 @@
+{
+  "name": "react-component-library-lerna",
+  "version": "0.0.1",
+  "description": "Example setup of a react-component library managed with lerna",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "lint": "lerna run lint --stream --parallel",
+    "start": "start-storybook -p 9001 -c .storybook --ci",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git update-index --again"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natterstefan/react-component-library-lerna.git"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/react-*",
+      "**/react-*/**"
+    ]
+  },
+  "keywords": [
+    "lerna"
+  ],
+  "author": "Stefan Natter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/natterstefan/react-component-library-lerna/issues"
+  },
+  "homepage": "https://github.com/natterstefan/react-component-library-lerna#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@storybook/addon-actions": "^4.1.11",
+    "@storybook/addon-backgrounds": "^4.1.11",
+    "@storybook/addon-console": "^1.1.0",
+    "@storybook/addon-knobs": "^4.1.11",
+    "@storybook/addon-options": "^4.1.11",
+    "@storybook/addon-storysource": "^4.1.11",
+    "@storybook/addon-viewport": "^4.1.11",
+    "@storybook/react": "^4.1.11",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.13.0",
+    "eslint-config-ns": "^0.2.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.2.2",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^1.3.1",
+    "lerna": "^3.10.7",
+    "lint-staged": "^8.1.3",
+    "prettier": "^1.16.3",
+    "storybook-addon-jsx": "^6.0.0",
+    "storybook-readme": "^4.0.5"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
