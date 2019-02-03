@@ -5,13 +5,15 @@ storybook.
 
 ## Getting started
 
+Use `yarn` instead of `npm`, because we rely on [`yarn`'s `workspaces` feature](https://yarnpkg.com/lang/en/docs/workspaces/).
+
 ```bash
-yarn i # also works with npm
+yarn i
 yarn run bootstrap
 yarn start
 ```
 
-Then you can open storybook at [http://localhost:9001](http://localhost:9001).
+Now you can open storybook at [http://localhost:9001](http://localhost:9001).
 
 ## Licence
 
