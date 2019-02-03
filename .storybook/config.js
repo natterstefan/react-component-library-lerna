@@ -5,7 +5,7 @@ import { withBackgrounds } from '@storybook/addon-backgrounds'
 import JSXAddon from 'storybook-addon-jsx'
 import '@storybook/addon-console'
 
-const req = require.context('../packages/storybook', true, /\.stories\.js$/)
+const req = require.context('../storybook', true, /\.stories\.js$/)
 
 function loadStories() {
   req.keys().forEach(filename => req(filename))

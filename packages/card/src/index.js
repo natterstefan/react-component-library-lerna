@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '@natterstefan/ns-button-js'
 
-const Card = props => (
+const Card = ({ onClick, children }) => (
   <div
     style={{
       border: '1px solid black',
@@ -10,7 +10,7 @@ const Card = props => (
     }}
   >
     <h1>Card</h1>
-    <Button onClick={props.onClick}>{props.children}</Button>
+    <Button onClick={onClick}>{children}</Button>
   </div>
 )
 
