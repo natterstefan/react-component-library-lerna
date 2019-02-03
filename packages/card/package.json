@@ -1,10 +1,13 @@
 {
-  "name": "@natterstefan/ns-button-js",
+  "name": "@natterstefan/ns-card-js",
   "version": "0.1.0",
-  "description": "Example button component",
+  "description": "Example card component",
   "main": "./dist/index.js",
   "module": "./src/index.js",
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "directories": {
     "lib": "src"
   },
@@ -21,6 +24,7 @@
   "author": "Stefan Natter",
   "license": "MIT",
   "dependencies": {
+    "@natterstefan/ns-button-js": "^0.1.0",
     "react": "^16.7.0"
   }
 }
