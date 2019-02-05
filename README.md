@@ -14,8 +14,8 @@ storybook.
 Use `yarn` instead of `npm`, because we rely on [`yarn`'s `workspaces` feature](https://yarnpkg.com/lang/en/docs/workspaces/).
 
 ```bash
-yarn i
-yarn run bootstrap
+yarn
+yarn bootstrap
 yarn start
 ```
 
