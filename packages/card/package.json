@@ -4,10 +4,7 @@
   "description": "Example card component",
   "main": "./dist/index.js",
   "module": "./src/index.js",
-  "files": [
-    "dist",
-    "src"
-  ],
+  "files": ["dist"],
   "directories": {
     "lib": "src"
   },
@@ -16,15 +13,16 @@
     "prebuild": "rimraf dist",
     "build": "babel --root-mode upward src --ignore */*.test.js,**/*.test.js,*/*.stories.js,**/stories.js --out-dir dist",
     "lint": "eslint src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "publishConfig": {
+    "access": "public",
     "registry": "http://localhost:4873/"
   },
   "author": "Stefan Natter",
   "license": "MIT",
   "dependencies": {
     "@natterstefan/ns-button-js": "^0.1.0",
-    "react": "^16.7.0"
+    "react": "^16.8.1"
   }
 }

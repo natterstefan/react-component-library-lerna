@@ -1,7 +1,7 @@
 # React Component Library with Lerna
 
 [![Dependencies](https://img.shields.io/david/natterstefan/react-component-library-lerna.svg)](https://github.com/natterstefan/react-component-library-lerna/blob/master/package.json)
-[![DevDependencies](https://img.shields.io/david/dev/natterstefan/react-trello-multiboard.svg)](https://github.com/natterstefan/react-trello-multiboard/blob/master/package.json)
+[![DevDependencies](https://img.shields.io/david/dev/natterstefan/react-component-library-lerna.svg)](https://github.com/natterstefan/react-component-library-lerna/blob/master/package.json)
 [![Known Vulnerabilities](https://snyk.io/test/github/natterstefan/react-component-library-lerna/badge.svg)](https://snyk.io/test/github/natterstefan/react-component-library-lerna)
 [![GitHub license](https://img.shields.io/github/license/natterstefan/react-component-library-lerna.svg)](https://github.com/natterstefan/react-component-library-lerna/blob/master/LICENCE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
@@ -32,6 +32,26 @@ Please, be patient. I will soon add "How to" sections. They are going to tell yo
 - and finally how to create a docker image with an example app.
 
 Stay tuned!
+
+### How to test publishing
+
+This repository comes with a pre-configured [verdaccio](https://verdaccio.org/)
+(private npm registry) setup. All you need to do is start it with:
+
+```bash
+cd localdev
+docker-compose -d # will start the verdaccio docker image
+```
+
+Now, open [http://localhost:4873/](http://localhost:4873/). You should see
+the UI of verdaccio on your screen now. That's great. Because it means you can
+now publish the packages to this npm registry. Usually you have to login to
+the registry, but the [.npmrc](./.npmrc) already includes the `_authToken`. So
+`yarn publish` in one of the packages will publish it, or with `yarn publish` in
+the root folder (uses lerna).
+
+In order to publish your packages to npm, simply change the `registry` property
+in each `package.json`'s `publishConfig`.
 
 ## Licence
 

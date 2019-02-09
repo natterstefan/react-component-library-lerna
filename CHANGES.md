@@ -6,4 +6,11 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
 
-- Initial project setup
+### Added
+
+- Initial project setup with
+  - lerna publishing flow
+  - local verdaccio setup (with docker)
+  - jest test suite setup
+  - ESLint and prettier setup
+  - babel setup

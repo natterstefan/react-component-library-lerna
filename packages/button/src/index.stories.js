@@ -4,8 +4,9 @@ import { action } from '@storybook/addon-actions'
 import { withKnobs, text } from '@storybook/addon-knobs'
 import { withReadme } from 'storybook-readme'
 
-import Card from '../../packages/card/src'
-import CardReadme from '../../packages/card/README.md'
+import ButtonReadme from '../README.md'
+
+import Button from '.'
 
 // the only reason onClick was written like this, and not just
 // `onClick = action('clicked')` is due to a cleaner export in the JSX tab
@@ -13,7 +14,10 @@ const onClick = e => {
   action('clicked')(e)
 }
 
-storiesOf('Card', module)
+storiesOf('Button', module)
   .addDecorator(withKnobs)
-  .addDecorator(withReadme(CardReadme))
-  .addWithJSX('default', () => <Card onClick={onClick}>Hello Card</Card>)
+  .addDecorator(withReadme(ButtonReadme))
+  .addWithJSX('default', () => {
+    const buttonText = text('text', 'Click me')
+    return <Button onClick={onClick}>{buttonText}</Button>
+  })

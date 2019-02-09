@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '@natterstefan/ns-button-js'
 
-const Card = ({ onClick, children }) => (
+const Card = ({ onClick, buttonText, title }) => (
   <div
     style={{
       border: '1px solid black',
@@ -9,8 +9,8 @@ const Card = ({ onClick, children }) => (
       textAlign: 'center',
     }}
   >
-    <h1>Card</h1>
-    <Button onClick={onClick}>{children}</Button>
+    <h1>{title}</h1>
+    <Button onClick={onClick}>{buttonText}</Button>
   </div>
 )
 

@@ -5,21 +5,19 @@ import { withBackgrounds } from '@storybook/addon-backgrounds'
 import JSXAddon from 'storybook-addon-jsx'
 import '@storybook/addon-console'
 
-const req = require.context('../storybook', true, /\.stories\.js$/)
-
 function loadStories() {
+  const req = require.context('../packages', true, /\.stories\.js$/)
   req.keys().forEach(filename => req(filename))
 }
 
 addDecorator(
   withOptions({
     name: 'Storybook',
-    url: 'https://natterstefan.me',
     goFullScreen: false,
-    showLeftPanel: true,
-    showDownPanel: true,
+    showStoriesPanel: true,
+    showAddonPanel: true,
     showSearchBox: false,
-    downPanelInRight: true,
+    addonPanelInRight: true,
     sortStoriesByKind: true,
   }),
 )

@@ -1,5 +1,14 @@
 .DS_Store
-dist
 node_modules
+
+# logs and temporary files
 *.log
 tmp
+
+# build
+build
+dist
+*.tgz
+
+# tests
+coverage
