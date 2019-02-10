@@ -33,6 +33,25 @@ Please, be patient. I will soon add "How to" sections. They are going to tell yo
 
 Stay tuned!
 
+### How to add new dependencies
+
+Adding `devDependencies` looks like this:
+
+```sh
+yarn add <package-name> --dev -W
+```
+
+This will add the dependency too the root `package.json` and make it available
+to all packages.
+
+Adding a new `dependency` for all or one of the packages looks like this:
+
+```sh
+npx lerna add <package-name>
+```
+
+One can read more about the command (eg. how to scope it, etc.) [here](https://github.com/lerna/lerna/tree/master/commands/add).
+
 ### How to test publishing
 
 This repository comes with a pre-configured [verdaccio](https://verdaccio.org/)
