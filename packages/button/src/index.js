@@ -1,9 +1,27 @@
 import React from 'react'
+import styled from 'styled-components'
 
-const Button = ({ onClick, children }) => (
-  <button type="button" onClick={onClick}>
+export const StyledButton = styled.button`
+  border: 1px solid #000;
+  padding: 10px;
+
+  :hover {
+    border: 2px solid blue;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  :active,
+  :focus,
+  :visited {
+    outline: none;
+  }
+`
+
+export const Button = ({ onClick, children }) => (
+  <StyledButton type="button" onClick={onClick}>
     {children}
-  </button>
+  </StyledButton>
 )
 
 export default Button

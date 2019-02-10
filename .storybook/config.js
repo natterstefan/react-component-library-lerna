@@ -12,13 +12,14 @@ function loadStories() {
 
 addDecorator(
   withOptions({
-    name: 'Storybook',
+    name: '@natterstefan',
+    url: 'https://twitter.com/natterstefan',
+    addonPanelInRight: true,
     goFullScreen: false,
-    showStoriesPanel: true,
     showAddonPanel: true,
     showSearchBox: false,
-    addonPanelInRight: true,
     sortStoriesByKind: true,
+    showStoriesPanel: true,
   }),
 )
 

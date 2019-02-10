@@ -1,17 +1,18 @@
 import React from 'react'
+import styled from 'styled-components'
 import Button from '@natterstefan/ns-button-js'
 
-const Card = ({ onClick, buttonText, title }) => (
-  <div
-    style={{
-      border: '1px solid black',
-      padding: '5px 20px 20px',
-      textAlign: 'center',
-    }}
-  >
+export const StyledCard = styled.div`
+  border: 1px solid black;
+  padding: 0 10px 15px;
+  text-align: center;
+`
+
+export const Card = ({ onClick, buttonText, title }) => (
+  <StyledCard>
     <h1>{title}</h1>
     <Button onClick={onClick}>{buttonText}</Button>
-  </div>
+  </StyledCard>
 )
 
 export default Card

@@ -12,6 +12,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "babel --root-mode upward src --ignore */*.test.js,**/*.test.js,*/*.stories.js,**/stories.js --out-dir dist",
+    "pretest": "yarn build",
     "lint": "eslint src",
     "test": "jest"
   },
@@ -22,6 +23,7 @@
   "author": "Stefan Natter",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.8.1"
+    "react": "^16.8.1",
+    "styled-components": "^4.1.3"
   }
 }

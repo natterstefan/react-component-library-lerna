@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount, shallow } from 'enzyme'
 
 import Button from '.'
 
@@ -11,7 +11,7 @@ describe('Button', () => {
 
   it('invokes onClick when clicked', () => {
     const onClick = jest.fn()
-    const wrapper = shallow(<Button onClick={onClick}>Hello Button</Button>)
+    const wrapper = mount(<Button onClick={onClick}>Hello Button</Button>)
     wrapper.find('button').simulate('click')
     expect(onClick).toHaveBeenCalledTimes(1)
   })

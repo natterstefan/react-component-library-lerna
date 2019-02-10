@@ -14,3 +14,4 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
   - jest test suite setup
   - ESLint and prettier setup
   - babel setup
+  - styled-components setup

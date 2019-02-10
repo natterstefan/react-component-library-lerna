@@ -4,7 +4,9 @@
   "description": "Example card component",
   "main": "./dist/index.js",
   "module": "./src/index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "directories": {
     "lib": "src"
   },
@@ -23,6 +25,7 @@
   "license": "MIT",
   "dependencies": {
     "@natterstefan/ns-button-js": "^0.1.0",
-    "react": "^16.8.1"
+    "react": "^16.8.1",
+    "styled-components": "^4.1.3"
   }
 }

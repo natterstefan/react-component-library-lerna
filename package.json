@@ -14,13 +14,17 @@
     "build-storybook": "build-storybook -c .storybook -o dist/storybook",
     "clean": "lerna clean",
     "clean-dist": "lerna run prebuild --stream --parallel",
-    "lint": "lerna run lint --stream --parallel",
+    "lint": "yarn lint-css && yarn lint-js",
+    "lint-css": "stylelint 'packages/**/*.js'",
+    "lint-js": "eslint ./packages",
+    "lint-lerna": "lerna run lint --stream --parallel",
     "prepublishOnly": "yarn clean && yarn && yarn build",
     "publish": "lerna publish",
-    "setup": "yarn clean && yarn && yarn bootstrap",
-    "start": "start-storybook -p 9001 -c .storybook --ci",
-    "test": "jest",
-    "watch-test": "jest --watch"
+    "setup": "yarn && yarn clean && yarn bootstrap",
+    "start": "yarn clean-dist && start-storybook -p 9001 -c .storybook --ci",
+    "pretest": "yarn build",
+    "test": "jest --detectOpenHandles",
+    "posttest": "yarn clean-dist"
   },
   "publishConfig": {
     "access": "public",
@@ -36,7 +40,7 @@
       "prettier --write",
       "yarn lint",
       "git update-index --again",
-      "jest --findRelatedTests"
+      "yarn test --findRelatedTests"
     ]
   },
   "repository": {
@@ -70,6 +74,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "24.1.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-styled-components": "1.10.0",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.9.1",
     "enzyme-to-json": "3.3.5",
@@ -85,13 +90,18 @@
     "jest": "24.1.0",
     "jest-environment-jsdom": "24.0.0",
     "jest-environment-jsdom-global": "1.1.0",
+    "jest-styled-components": "6.3.1",
     "lerna": "^3.11.0",
     "lint-staged": "^8.1.3",
     "prettier": "^1.16.4",
     "react-scripts": "^2.1.3",
     "rimraf": "^2.6.3",
     "storybook-addon-jsx": "^6.0.0",
-    "storybook-readme": "^4.0.5"
+    "storybook-readme": "^4.0.5",
+    "stylelint": "9.10.1",
+    "stylelint-config-recommended": "2.1.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-processor-styled-components": "1.5.2"
   },
   "dependencies": {
     "react": "^16.8.1",
