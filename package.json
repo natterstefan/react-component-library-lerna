@@ -19,13 +19,14 @@
     "lint-js": "eslint ./packages",
     "lint-md": "remark .",
     "lint-lerna": "lerna run lint --stream --parallel",
+    "postinstall": "yarn bootstrap",
+    "posttest": "yarn clean-dist",
     "prepublishOnly": "yarn clean && yarn && yarn build",
+    "pretest": "yarn build",
     "publish": "lerna publish",
     "setup": "yarn && yarn clean && yarn bootstrap",
     "start": "yarn clean-dist && start-storybook -p 9001 -c .storybook --ci",
-    "pretest": "yarn build",
-    "test": "jest --detectOpenHandles",
-    "posttest": "yarn clean-dist"
+    "test": "jest --detectOpenHandles"
   },
   "publishConfig": {
     "access": "public",
@@ -49,9 +50,13 @@
     "url": "git+https://github.com/natterstefan/react-component-library-lerna.git"
   },
   "workspaces": {
-    "packages": ["packages/*"]
+    "packages": [
+      "packages/*"
+    ]
   },
-  "keywords": ["lerna"],
+  "keywords": [
+    "lerna"
+  ],
   "author": "Stefan Natter",
   "license": "MIT",
   "bugs": {
@@ -105,10 +110,13 @@
     "stylelint": "9.10.1",
     "stylelint-config-recommended": "2.1.0",
     "stylelint-config-styled-components": "0.1.1",
-    "stylelint-processor-styled-components": "1.5.2"
+    "stylelint-processor-styled-components": "1.5.2",
+    "webpack": "4.29.3",
+    "webpack-cli": "3.2.3"
   },
   "dependencies": {
     "react": "^16.8.1",
-    "react-dom": "^16.8.1"
+    "react-dom": "^16.8.1",
+    "styled-components": "4.1.3"
   }
 }

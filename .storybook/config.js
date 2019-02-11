@@ -7,7 +7,14 @@ import '@storybook/addon-console'
 
 function loadStories() {
   const req = require.context('../packages', true, /\.stories\.js$/)
-  req.keys().forEach(filename => req(filename))
+  req.keys().forEach(filename => {
+    // exclude node_modules, as sub-packages can contain node_modules folder w/
+    // stories
+    if (filename.includes('node_modules')) {
+      return
+    }
+    return req(filename)
+  })
 }
 
 addDecorator(

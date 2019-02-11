@@ -1,13 +1,14 @@
 .DS_Store
 node_modules
-
-# logs and temporary files
 *.log
 tmp
 
 # build
 build
 dist
+es
+esm
+lib
 *.tgz
 
 # tests
