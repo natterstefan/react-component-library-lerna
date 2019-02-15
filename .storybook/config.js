@@ -36,12 +36,13 @@ configureViewport({
   },
 })
 
-addDecorator(
-  withBackgrounds([
-    { name: 'gray', value: '#efefef' },
-    { name: 'white', value: '#fff', default: true },
-  ]),
-)
+// NOTE: does not work when using <GlobalStyles /> in a story
+// addDecorator(
+//   withBackgrounds([
+//     { name: 'gray', value: '#efefef' },
+//     { name: 'white', value: '#fff', default: true },
+//   ]),
+// )
 
 setAddon(JSXAddon)
 

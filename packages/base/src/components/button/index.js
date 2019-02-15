@@ -1,13 +1,16 @@
 import React from 'react'
+import { get } from 'lodash'
 import styled from 'styled-components'
 
 export const StyledButton = styled.button`
-  border: 1px solid #000;
+  border: 2px solid ${props => get(props, 'theme.colors.accent') || '#000'};
+  border-radius: 5px;
   padding: 10px;
+  margin-top: 10px;
 
   :hover {
-    border: 2px solid blue;
     cursor: pointer;
+    border-color: ${props => get(props, 'theme.colors.secondary') || '#000'};
     font-weight: 700;
   }
 

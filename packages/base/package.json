@@ -1,7 +1,7 @@
 {
-  "name": "@natterstefan/ns-button-js",
+  "name": "@natterstefan/ns-base-js",
   "version": "0.1.0",
-  "description": "Example button component",
+  "description": "Example base components",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": ["dist", "es", "esm", "lib"],
@@ -29,6 +29,7 @@
   "author": "Stefan Natter",
   "license": "MIT",
   "dependencies": {
+    "lodash": "^4.17.11",
     "react": "^16.8.1",
     "styled-components": "^4.1.3"
   }

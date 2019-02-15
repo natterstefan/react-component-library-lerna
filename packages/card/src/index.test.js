@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount, shallow } from 'enzyme'
-import Button from '@natterstefan/ns-button-js'
+import { Button } from '@natterstefan/ns-base-js'
 
 import Card from '.'
 

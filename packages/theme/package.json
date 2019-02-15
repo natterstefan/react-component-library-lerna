@@ -1,7 +1,7 @@
 {
-  "name": "@natterstefan/ns-card-js",
+  "name": "@natterstefan/ns-theme-js",
   "version": "0.1.0",
-  "description": "Example card component",
+  "description": "Example theme component",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
@@ -34,7 +34,6 @@
   "author": "Stefan Natter",
   "license": "MIT",
   "dependencies": {
-    "@natterstefan/ns-base-js": "^0.1.0",
     "lodash": "^4.17.11",
     "react": "^16.8.1",
     "styled-components": "^4.1.3"

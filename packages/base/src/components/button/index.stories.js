@@ -3,8 +3,10 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withKnobs, text } from '@storybook/addon-knobs'
 import { withReadme } from 'storybook-readme'
+import { ThemeProvider } from 'styled-components'
 
-import ButtonReadme from '../README.md'
+import { GlobalStyle, theme } from '../../../../theme/src'
+import ButtonReadme from '../../../README.md'
 
 import Button from '.'
 
@@ -23,10 +25,13 @@ const StoryComponent = () => {
   }
 
   return (
-    <div>
-      <p>You clicked {count} times</p>
-      <Button onClick={onClick}>{buttonText}</Button>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div style={{ margin: '0 auto', width: '300px' }}>
+        <GlobalStyle />
+        <p>You clicked {count} times</p>
+        <Button onClick={onClick}>{buttonText}</Button>
+      </div>
+    </ThemeProvider>
   )
 }
 
@@ -35,6 +40,13 @@ storiesOf('Button', module)
   .addDecorator(withReadme(ButtonReadme))
   .addWithJSX('default', () => {
     const buttonText = text('text', 'Click me')
-    return <Button onClick={onClickHandler}>{buttonText}</Button>
+    return (
+      <ThemeProvider theme={theme}>
+        <div style={{ margin: '0 auto', width: '300px' }}>
+          <GlobalStyle />
+          <Button onClick={onClickHandler}>{buttonText}</Button>
+        </div>
+      </ThemeProvider>
+    )
   })
   .addWithJSX('with click counter (hooks)', () => <StoryComponent />)
