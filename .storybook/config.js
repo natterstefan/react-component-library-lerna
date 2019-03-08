@@ -1,5 +1,4 @@
-import { addDecorator, configure, setAddon } from '@storybook/react'
-import { withOptions } from '@storybook/addon-options'
+import { addParameters, configure, setAddon } from '@storybook/react'
 import { configureViewport, INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { withBackgrounds } from '@storybook/addon-backgrounds'
 import JSXAddon from 'storybook-addon-jsx'
@@ -17,32 +16,24 @@ function loadStories() {
   })
 }
 
-addDecorator(
-  withOptions({
-    name: '@natterstefan',
-    url: 'https://twitter.com/natterstefan',
-    addonPanelInRight: true,
-    goFullScreen: false,
-    showAddonPanel: true,
+addParameters({
+  options: {
+    brandTitle: '@natterstefan',
+    brandUrl: 'https://twitter.com/natterstefan',
+    isFullscreen: false,
+    panelPosition: 'right',
+    showNav: true,
+    showPanel: true,
     showSearchBox: false,
     sortStoriesByKind: true,
-    showStoriesPanel: true,
-  }),
-)
+  },
+})
 
-configureViewport({
+addParameters({
   viewports: {
     ...INITIAL_VIEWPORTS,
   },
 })
-
-// NOTE: does not work when using <GlobalStyles /> in a story
-// addDecorator(
-//   withBackgrounds([
-//     { name: 'gray', value: '#efefef' },
-//     { name: 'white', value: '#fff', default: true },
-//   ]),
-// )
 
 setAddon(JSXAddon)
 

@@ -9,6 +9,12 @@
 Build your own React component library managed with lerna and presented with
 storybook.
 
+## Features
+
+- [react-hooks](https://reactjs.org/docs/hooks-overview.html) support ⚛
+- integrated [storybook@5](https://storybook.js.org) :books:
+- example components built with styled-components 💅
+
 ## Getting started
 
 Use `yarn` instead of `npm`, because we rely on [`yarn`'s `workspaces` feature](https://yarnpkg.com/lang/en/docs/workspaces/).
@@ -71,6 +77,21 @@ the root folder (uses lerna).
 
 In order to publish your packages to npm, simply change the `registry` property
 in each `package.json`'s `publishConfig`.
+
+## Contribution
+
+PRs are welcome and I am happy if you want to contribute! Just let me know,
+please.
+
+### Forks
+
+If this repository is forked and I see further progress on the forked repo, I am
+very happy to list your work here. It's awesome to see, when people start using
+and moving this repository even further.
+
+- [https://github.com/sebastianescribano/react-component-library-lerna](https://github.com/sebastianescribano/react-component-library-lerna):
+  they are really pushing it. They integrated a CLI to create packages from a
+  template, for instance.
 
 ## Licence
 
