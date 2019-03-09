@@ -2,6 +2,8 @@
   "name": "react-component-library-lerna",
   "version": "0.0.1",
   "description": "Example setup of a react-component library managed with lerna",
+  "author": "Stefan Natter",
+  "license": "Apache-2.0",
   "private": true,
   "engines": {
     "node": "^10.14",
@@ -52,9 +54,13 @@
   "workspaces": {
     "packages": ["packages/*"]
   },
-  "keywords": ["lerna"],
-  "author": "Stefan Natter",
-  "license": "MIT",
+  "keywords": [
+    "lerna",
+    "monorepo",
+    "component-library",
+    "storybook",
+    "styled-components"
+  ],
   "bugs": {
     "url": "https://github.com/natterstefan/react-component-library-lerna/issues"
   },

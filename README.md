@@ -12,8 +12,13 @@ storybook.
 ## Features
 
 - [react-hooks](https://reactjs.org/docs/hooks-overview.html) support ⚛
-- integrated [storybook@5](https://storybook.js.org) :books:
-- example components built with styled-components 💅
+- integrated [storybook@5](https://storybook.js.org) with examples :books:
+- example components built with [styled-components](https://github.com/styled-components/styled-components) 💅
+- [ESLint](https://github.com/eslint/eslint), [stylelint](https://github.com/stylelint/stylelint)
+  and [remark](https://github.com/remarkjs/remark) and [prettier](https://github.com/prettier/prettier)
+  integration
+- [jest](https://github.com/facebook/jest) 🃏 and [enzyme](https://github.com/airbnb/enzyme)
+  for testing
 
 ## Getting started
 
@@ -95,7 +100,7 @@ and moving this repository even further.
 
 ## Licence
 
-[MIT](LICENCE)
+[Apache 2.0](LICENCE)
 
 ## Maintainers
 
