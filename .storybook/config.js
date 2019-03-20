@@ -1,6 +1,5 @@
 import { addParameters, configure, setAddon } from '@storybook/react'
 import { configureViewport, INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-import { withBackgrounds } from '@storybook/addon-backgrounds'
 import JSXAddon from 'storybook-addon-jsx'
 import '@storybook/addon-console'
 
