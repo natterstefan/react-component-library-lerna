@@ -15,3 +15,4 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
   - ESLint and prettier setup
   - babel setup
   - styled-components setup
+  - templating cli (thx to commander, shelljs and inquirer)
