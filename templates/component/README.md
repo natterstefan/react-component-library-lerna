@@ -1,0 +1,7 @@
+# [NAME]
+
+[DESCRIPTION]
+
+## Licence
+
+[YEAR] [[LICENCE]](./LICENCE)

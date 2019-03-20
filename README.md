@@ -19,6 +19,7 @@ storybook.
   integration
 - [jest](https://github.com/facebook/jest) 🃏 and [enzyme](https://github.com/airbnb/enzyme)
   for testing
+- [built-in cli]: create new component packages within seconds (`yarn commander --help`)
 
 ## Getting started
 

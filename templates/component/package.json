@@ -1,0 +1,34 @@
+{
+  "name": "[NAME]",
+  "version": "[VERSION]",
+  "author": "[AUTHOR]",
+  "license": "[LICENC]",
+  "description": "[DESCRIPTION]",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": ["dist", "es", "esm", "lib"],
+  "directories": {
+    "lib": "lib"
+  },
+  "private": true,
+  "scripts": {
+    "prebuild": "rimraf dist && rimraf es && rimraf esm && rimraf lib",
+    "build": "yarn build-csj && yarn build-es && yarn build-esm && yarn build-umd",
+    "build-csj": "BABEL_ENV=cjs babel --root-mode upward src --ignore */*.test.js,**/*.test.js,*/*.stories.js,**/stories.js --out-dir lib",
+    "build-esm": "BABEL_ENV=esm babel --root-mode upward src --ignore */*.test.js,**/*.test.js,*/*.stories.js,**/stories.js --out-dir esm",
+    "build-es": "BABEL_ENV=es babel --root-mode upward src --ignore */*.test.js,**/*.test.js,*/*.stories.js,**/stories.js --out-dir es",
+    "build-umd": "webpack --mode=production",
+    "lint": "yarn lint-js && yarn lint-css",
+    "lint-js": "eslint src",
+    "lint-css": "stylelint 'src/**/*.js'",
+    "pretest": "yarn build",
+    "test": "jest"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "[REGISTRY]"
+  },
+  "peerDependencies": {
+    "react": "^16.8.4"
+  }
+}
