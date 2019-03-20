@@ -24,10 +24,6 @@ program
   .version(pkg.version)
   .command('create')
   .description('create new package from template')
-  .option(
-    '-v, --variant <name>',
-    'Which template variant you want to crate (default: component)',
-  )
   .action(create)
   .parse(process.argv)
 
