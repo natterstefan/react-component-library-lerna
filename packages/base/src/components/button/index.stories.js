@@ -28,7 +28,7 @@ const StoryComponent = () => {
     <ThemeProvider theme={theme}>
       <div style={{ margin: '0 auto', width: '300px' }}>
         <GlobalStyle />
-        <p>You clicked {count} times</p>
+        <p>You clicked too {count} times</p>
         <Button onClick={onClick}>{buttonText}</Button>
       </div>
     </ThemeProvider>

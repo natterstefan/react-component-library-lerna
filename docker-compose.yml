@@ -1,0 +1,29 @@
+version: '3.5'
+services:
+  app:
+    container_name: monorepo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+    working_dir: /app
+    ports:
+      - '9000:9001'
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+# volumes:
+#   nodemodules:
+#     external: true
+
+# # Create volume
+# - type: volume
+# source: nodemodules
+# target: /app/node_modules
+# # Bind volume
+# - type: bind
+# source: ./
+# target: /app

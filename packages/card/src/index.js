@@ -22,6 +22,7 @@ export const StyledCard = styled.div`
 export const Card = ({ children, onClick, buttonText, title }) => (
   <StyledCard>
     <h1>{title}</h1>
+    <p>Card--256</p>
     <p>{children}</p>
     <Button onClick={onClick}>{buttonText}</Button>
   </StyledCard>

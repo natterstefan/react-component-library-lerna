@@ -1,0 +1,41 @@
+# https://mherman.org/blog/dockerizing-a-react-app/
+
+$ docker run -it \
+  -v ${PWD}:/usr/src/app \
+  -v /usr/src/app/node_modules \
+  -p 3000:3000 \
+  --rm \
+  sample-app
+
+
+
+
+  version: '3.5'
+version: '3.5'
+services:
+    app:
+        container_name: reactapp
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - type: volume
+              source: mydata
+              target: /data
+              volume:
+                  nocopy: true
+            # Bind volume
+            - type: bind
+              source: .
+              target: /app
+        ports:
+            - '9000:3000'
+        environment:
+            - NODE_ENV=development
+volumes:
+    #lifestoryvol:
+    #    external: true
+    mydata:
+
+# use the chokidar
+$ docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 -e CHOKIDAR_USEPOLLING=true --rm sample:dev
